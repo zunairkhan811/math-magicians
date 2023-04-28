@@ -76,3 +76,23 @@ code {
   border: 2px solid brown;
   color: darkred;
 }
+
+.loading {
+  position: relative;
+  top: -120px;
+  width: 300px;
+  float: right;
+  margin-right: 300px;
+  border: 2px solid brown;
+  color: darkred;
+}
+
+.error {
+  position: relative;
+  top: -120px;
+  width: 300px;
+  float: right;
+  margin-right: 300px;
+  border: 2px solid brown;
+  color: darkred;
+}
