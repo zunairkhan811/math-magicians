@@ -34,7 +34,7 @@ code {
   display: grid;
   width: 500px;
   border: 2px solid brown;
-  margin: auto;
+  margin-left: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
@@ -65,4 +65,14 @@ code {
 
 .color {
   background-color: orangered;
+}
+
+.quote {
+  position: relative;
+  top: -120px;
+  width: 300px;
+  float: right;
+  margin-right: 300px;
+  border: 2px solid brown;
+  color: darkred;
 }
