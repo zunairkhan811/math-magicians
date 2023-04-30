@@ -1,50 +1,43 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const Quote = () => {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [data, setData] = useState('');
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('https://api.api-ninjas.com/v1/quotes?category=computers', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Api-key': 'caQKmJfAffKkic4Ds+HCAg==mQxfwIuFGKHRqdIW',
+        },
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const apiKey = 'k8Y//jwNVrEiV+8XyecTdQ==dbnY7z0CBmyoJMiC';
-        const options = {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Api-Key': apiKey,
-          },
-        };
-        const url = 'https://api.api-ninjas.com/v1/quotes?category=happiness';
-        const response = await fetch(url, options);
-        const text = await response.json();
-        setData(text[0]);
-      } catch (error) {
-        setError(true);
-      }
+      });
+      const newdata = await response.data;
+      setData(newdata);
       setLoading(false);
-    };
-    fetchData();
-  }, [setData, setLoading]);
+    } catch (error) {
+      setLoading(false);
+      setError(error.message);
+    }
+  };
+  useEffect(() => fetchData, []);
 
-  if (loading) return <div className="loading">Loading...</div>;
-  if (error) return <div className="error">Something went wrong!</div>;
-
+  if (loading) return <div className="quote"><p>Loading ...</p></div>;
+  if (error) return <div className="quote"><p>Sorry cannot Load Data!!</p></div>;
   return (
     <>
-      <div>{loading}</div>
-      <div>{error}</div>
-      <div data-testid="quote-test" className="quote">
-        Quote :
-        {data.quote}
-        {' '}
-        <br />
-        {' '}
-        By :
-        {' '}
-        {data.author}
+      <div className="quote">
+        <p>
+          Quote:
+          {data[0].quote}
+          <br />
+          By:
+          {' '}
+          {data[0].author}
+        </p>
       </div>
     </>
   );
