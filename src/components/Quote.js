@@ -7,13 +7,12 @@ const Quote = () => {
   const [data, setData] = useState('');
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://api.api-ninjas.com/v1/quotes?category=computers', {
+      const response = await axios.get('https://api.api-ninjas.com/v1/quotes?category=humor', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
           'X-Api-key': 'caQKmJfAffKkic4Ds+HCAg==mQxfwIuFGKHRqdIW',
         },
-
       });
       const newdata = await response.data;
       setData(newdata);
@@ -32,6 +31,7 @@ const Quote = () => {
       <div className="quote">
         <p>
           Quote:
+          {' '}
           {data[0].quote}
           <br />
           By:

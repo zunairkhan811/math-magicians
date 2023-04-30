@@ -9,7 +9,7 @@ export default function Calculator() {
   };
   return (
     <div className="grid-container">
-      <Result result={output.next || output.total} />
+      <Result result={output} />
       <button onClick={handleClick} type="button" className="item">AC</button>
       <button onClick={handleClick} type="button" className="item">+/-</button>
       <button onClick={handleClick} type="button" className="item">%</button>
