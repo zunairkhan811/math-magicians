@@ -1,0 +1,17 @@
+const Home = () => (
+  <>
+    <div className="home">
+      <h1>Welcome to our Page!</h1>
+      <p>
+        I am Excited that you are Here.
+        Math Magicians Website has been made for user to  Do Calculation online.
+        Feel free to visit our Calculator App by clicking on Calculator
+        Tab and do the calculation as many as you want.
+        If you wanna see some quotes as well, you can see the quotes
+        by clicking on the Quotes Tab on Top right of the page.
+      </p>
+    </div>
+  </>
+);
+
+export default Home;
