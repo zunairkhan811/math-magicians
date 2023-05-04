@@ -1,47 +1,47 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Quote = () => {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [data, setData] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('https://api.api-ninjas.com/v1/quotes?category=happiness', {
+        const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=humor', {
           method: 'GET',
           headers: {
-            'X-Api-Key': 'caQKmJfAffKkic4Ds+HCAg==mQxfwIuFGKHRqdIW',
-            'Content-type': 'application/json',
+            'Content-Type': 'application/json',
+            'X-Api-key': 'caQKmJfAffKkic4Ds+HCAg==mQxfwIuFGKHRqdIW',
           },
         });
-        const data = await res.json();
-        if (data.length > 0) {
-          setData(data[0].quote);
-        } else {
-          setData('');
-        }
-      } catch (err) {
-        setError(err.message);
+        const newdata = await response.json();
+        setData(newdata);
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+        setError(error.message);
       }
     };
     fetchData();
   }, []);
 
-  if (error) {
-    return (
+  if (loading) return <div className="quote"><p>Loading ...</p></div>;
+  if (error) return <div className="quote"><p>Sorry cannot Load Data!!</p></div>;
+  return (
+    <>
       <div className="quote">
         <p>
-          Error:
-          {error}
+          Quote:
+          {' '}
+          {data[0].quote}
+          <br />
+          By:
+          {' '}
+          {data[0].author}
         </p>
       </div>
-    );
-  }
-
-  return (
-    <div className="quote">
-      {data ? <p>{data}</p> : <p>Loading....</p>}
-    </div>
+    </>
   );
 };
 
