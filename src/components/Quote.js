@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 const Quote = () => {
   const [loading, setLoading] = useState(true);
@@ -7,7 +7,7 @@ const Quote = () => {
   const [data, setData] = useState('');
   const fetchData = async () => {
     try {
-      const response = await axios.get('https://api.api-ninjas.com/v1/quotes?category=humor', {
+      const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=humor', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
