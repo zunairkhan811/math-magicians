@@ -1,45 +1,47 @@
-import { useState, useEffect } from 'react';
-// import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const Quote = () => {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-  const [data, setData] = useState('');
-  const fetchData = async () => {
-    try {
-      const response = await fetch('https://api.api-ninjas.com/v1/quotes?category=humor', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Api-key': 'caQKmJfAffKkic4Ds+HCAg==mQxfwIuFGKHRqdIW',
-        },
-      });
-      const newdata = await response.json();
-      setData(newdata);
-      setLoading(false);
-    } catch (error) {
-      setLoading(false);
-      setError(error.message);
-    }
-  };
-  useEffect(() => fetchData, []);
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
 
-  if (loading) return <div className="quote"><p>Loading ...</p></div>;
-  if (error) return <div className="quote"><p>Sorry cannot Load Data!!</p></div>;
-  return (
-    <>
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch('https://api.api-ninjas.com/v1/quotes?category=happiness', {
+          method: 'GET',
+          headers: {
+            'X-Api-Key': 'caQKmJfAffKkic4Ds+HCAg==mQxfwIuFGKHRqdIW',
+            'Content-type': 'application/json',
+          },
+        });
+        const data = await res.json();
+        if (data.length > 0) {
+          setData(data[0].quote);
+        } else {
+          setData('');
+        }
+      } catch (err) {
+        setError(err.message);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (error) {
+    return (
       <div className="quote">
         <p>
-          Quote:
-          {' '}
-          {data[0].quote}
-          <br />
-          By:
-          {' '}
-          {data[0].author}
+          Error:
+          {error}
         </p>
       </div>
-    </>
+    );
+  }
+
+  return (
+    <div className="quote">
+      {data ? <p>{data}</p> : <p>Loading....</p>}
+    </div>
   );
 };
 
