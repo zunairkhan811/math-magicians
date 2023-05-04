@@ -12,7 +12,7 @@ import Home from './components/Home';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="math-magicians">
         <Navbar />
         <Routes>
           <Route index element={<Home />} />
