@@ -14,7 +14,7 @@ const Quote = () => {
           'X-Api-key': 'caQKmJfAffKkic4Ds+HCAg==mQxfwIuFGKHRqdIW',
         },
       });
-      const newdata = await response.data;
+      const newdata = await response.json();
       setData(newdata);
       setLoading(false);
     } catch (error) {
