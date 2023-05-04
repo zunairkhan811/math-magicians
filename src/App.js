@@ -1,5 +1,5 @@
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
 } from 'react-router-dom';
@@ -12,16 +12,16 @@ import Home from './components/Home';
 function App() {
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <Navbar />
-
         <Routes>
+          <Route index element={<Home />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Quote" element={<Quote />} />
           <Route path="/Calculator" element={<Calculator />} />
         </Routes>
 
-      </Router>
+      </BrowserRouter>
     </>
   );
 }

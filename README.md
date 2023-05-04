@@ -64,7 +64,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [coming soon](#)
+- [Live](https://zunairkhan811.github.io/math-magicians/index.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
