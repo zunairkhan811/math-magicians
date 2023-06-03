@@ -171,7 +171,7 @@ To check for js errors run:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [Issues Page](https://github.com/zunairkhan811/math-magician/issues).
+Feel free to check the [Issues Page](https://github.com/zunairkhan811/math-magicians/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
