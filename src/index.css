@@ -1,8 +1,9 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family:
     -apple-system,
@@ -31,64 +32,71 @@ code {
 }
 
 @media screen and (min-width: 280px) {
-  .calculator-heading {
-    position: relative;
-    top: 80px;
-    left: 90px;
+  .calculator-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
+
+  .calculator-heading {
+    width: 100%;
+  }
+
   .calculator-heading h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 30px auto;
     color: #e91717;
   }
-  
+
   .grid-container {
-    min-width: 280px;
-    max-width: 500px;
+    width: 90%;
     position: relative;
-    float: right;
-    margin-right: 119px;
+    justify-content: center;
+    align-items: center;
     top: 5px;
     display: grid;
-    width: 500px;
     border: 2px solid brown;
-    margin-left: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  
+
   .result {
     width: 100%;
     background-color: gray;
     grid-column: 1 / span 4;
   }
-  
+
   .result p {
     float: right;
     padding: 0 10px;
     font-size: 30px;
   }
-  
+
   .item {
     padding: 9px;
     cursor: pointer;
   }
-  
+
   .item:hover {
     background-color: brown;
   }
-  
+
   .span2 {
     grid-column: 1 / span 2;
   }
-  
+
   .color {
     background-color: orangered;
   }
-  
+
   .quote {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    text-align: center;
     top: 120px;
     width: 80%;
     font-size: 34px;
@@ -96,7 +104,7 @@ code {
     border: 2px solid brown;
     color: darkred;
   }
-  
+
   .loading {
     position: relative;
     top: -120px;
@@ -106,7 +114,7 @@ code {
     border: 2px solid brown;
     color: darkred;
   }
-  
+
   .error {
     position: relative;
     top: -120px;
@@ -116,7 +124,7 @@ code {
     border: 2px solid brown;
     color: darkred;
   }
-  
+
   nav {
     padding: 5px;
     display: flex;
@@ -126,7 +134,7 @@ code {
     align-items: center;
     width: 100%;
   }
-  
+
   .nav-logo {
     width: 50%;
     transition: all 2s ease-in-out;
@@ -134,18 +142,18 @@ code {
     justify-content: center;
     align-items: center;
   }
-  
+
   .nav-logo h1 {
-    /* position: relative;
-    left: 70px; */
     color: #e91717;
     font-size: 30px;
     transition: color 1s ease-in-out;
   }
-  .nav-links{
+
+  .nav-links {
     padding: 5px;
     width: 100%;
   }
+
   .nav-links ul {
     width: 100%;
     list-style: none;
@@ -155,27 +163,27 @@ code {
     padding: 5px;
     color: #e91717;
   }
-  
+
   .nav-links ul li {
     padding: 10px;
     font-size: 24px;
     border-right: 2px solid #e91717;
   }
-  
+
   .links {
     color: #e91717;
     text-decoration: none;
   }
-  
+
   .links:hover {
     text-decoration: underline;
     color: blueviolet;
   }
-  
+
   .nav-links ul li:last-child {
     border: none;
   }
-  
+
   .home {
     display: flex;
     justify-content: center;
@@ -186,24 +194,28 @@ code {
     top: 30px;
     width: 100%;
   }
-  
+
   .home h1 {
     color: #e91717;
   }
-  
+
   .home p {
     margin-top: 20px;
     font-size: 20px;
     padding: 20px;
   }
-  
+
   .nav-logo:hover {
     transform: rotate(360deg);
   }
-  
+
   .nav-logo h1:hover {
     color: blueviolet;
   }
-  
 }
 
+@media screen and (min-width: 580px) {
+  .grid-container {
+    width: 50%;
+  }
+}
