@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Result component correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="result"
+  >
+    <p>
+      10+5
+    </p>
+  </div>
+</DocumentFragment>
+`;
