@@ -37,7 +37,7 @@
 
 **[Math-magician]** This project is an basic calculator Responsive app that allows users to perform simple calculations as well as quotes are shown using the API.
 
-- [Video Link about Project] <a href="https://www.loom.com/share/c7e682d29e85471ab1be011c333d5b88"><button type="button" color:red background: white>Click Here</button></a>
+- [Video Link about Project] <a href="https://www.loom.com/share/a83b31dd2e814963bfba8adae293b243"><button type="button" color:red background: white>Click Here</button></a>
 
 ## 🛠 Built With <a name="HTML, CSS, Javascript and React"></a>
 
@@ -59,6 +59,7 @@
 
 - [x] Create a simple calculation web app
 - [x] Add all necessary operations for basic a basic calculator.
+- [x] Fetched Quotes using API in Quote.js component
 - [x] Used React technology.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -170,7 +171,7 @@ To check for js errors run:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [https://github.com/zunairkhan811/math-magician/issues](issue page).
+Feel free to check the [Issues Page](https://github.com/zunairkhan811/math-magician/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
