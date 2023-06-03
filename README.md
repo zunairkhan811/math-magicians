@@ -2,7 +2,8 @@
 
 <div align="center">
 
-  <h3><b>Math Magician</b></h3>
+  <h3><b>**Math Magician**</b></h3>
+  <img src="./src/images/calculatorscreenshot.png" alt="project screenshot"/>
 
 </div>
 
@@ -32,9 +33,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Math Magician] <a name="about-project"></a>
+# 📖 [Math-Magician] <a name="about-project"></a>
 
-**[Math-magician]** This project is an basic calculator web app  that allows users to perform simple calculations.
+**[Math-magician]** This project is an basic calculator Responsive app that allows users to perform simple calculations as well as quotes are shown using the API.
+
+- [Video Link about Project] <a href="https://www.loom.com/share/c7e682d29e85471ab1be011c333d5b88"><button type="button" color:red background: white>Click Here</button></a>
 
 ## 🛠 Built With <a name="HTML, CSS, Javascript and React"></a>
 
@@ -88,7 +91,7 @@ Open terminal on the same folder of the project and run:
 Clone this repository to your desired folder:
 
 ```sh
-  git https://github.com/adeola003/math-magician.git
+  git https://github.com/zunairkhan811/math-magician.git
   cd math-magician
 ```
 
@@ -149,7 +152,7 @@ To check for js errors run:
 
 - GitHub: [@zunairkhan811](https://github.com/zunairkhan811)
 - Twitter: [@zunairkhan811](https://twitter.com/zunairkhan811)
-- LinkedIn: [zunairkhan811](https://linkedin.com/in/zunairkhan811)
+- LinkedIn: [@mzunairkhan](https://linkedin.com/in/mzunairkhan)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,8 +160,6 @@ To check for js errors run:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [x] Add test to the project using jest
-- [x] Add the live demo for the project
 - [x] Add new some features to the project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -169,7 +170,7 @@ To check for js errors run:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [https://github.com/adeola003/math-magician/issues](issue page).
+Feel free to check the [https://github.com/zunairkhan811/math-magician/issues](issue page).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
